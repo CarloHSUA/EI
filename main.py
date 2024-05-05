@@ -14,6 +14,14 @@ from ResGCNV2 import ResGCNV2
 import json
 import numpy as np
 import os
+import sys
+
+
+if len(sys.argv) > 1:
+    print("Argument: ", sys.argv)
+    model_weight = sys.argv[1]
+else:
+    model_weight = 'extended_model.pth'
 
 
 torch.manual_seed(42)
@@ -162,8 +170,8 @@ if __name__=='__main__':
                                         shuffle=True)
 
     # Check if the model is already trained
-    if os.path.exists('model/extended_model.pth'):
-        extended_model.load_state_dict(torch.load('model/extended_model.pth'))
+    if os.path.exists(f'model/{model_weight}'):
+        extended_model.load_state_dict(torch.load(f'model/{model_weight}'))
         test_prediction(extended_model, dataloader_skeleton_test, criterion)
 
     else:
