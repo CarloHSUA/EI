@@ -1,0 +1,11 @@
+pandas
+rich
+numpy
+torch
+sklearn
+matplotlib
+pytorch-metric-learning
+torch-geometric ~= 2.0.3
+torchvision
+tqdm
+imageio
