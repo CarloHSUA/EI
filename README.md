@@ -30,7 +30,7 @@ En el caso de que se pretenda usar un modelo preentrenado, se pueden utilizar lo
 - `extended_model_run_level_RSE.pth`
 - `extended_model_subject_level_GHQ.pth`
 - `extended_model_subject_level_RSE.pth`
-- `basic.pth`
+- `basic.ckpt`
 
 
 Ejecutando el siguiente comando:
