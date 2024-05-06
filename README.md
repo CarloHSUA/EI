@@ -27,10 +27,10 @@ python main.py
 
 En el caso de que se pretenda usar un modelo preentrenado, se pueden utilizar los siguientes:
 - `extended_model_run_level_GHQ.pth`
-- `extended_model_run_level_GHQ.pth`
-- `extended_model_run_level_GHQ.pth`
-- `extended_model_run_level_GHQ.pth`
-- `extended_model_run_level_GHQ.pth`
+- `extended_model_run_level_RSE.pth`
+- `extended_model_subject_level_GHQ.pth`
+- `extended_model_subject_level_RSE.pth`
+- `basic.pth`
 
 
 Ejecutando el siguiente comando:
@@ -39,11 +39,12 @@ python main.py <nombre_del_fihero_de_pesos>
 ```
 
 ## Estructura del repositorio
-- data/ : Contiene el dataset de S-FFSD en diferentes archivos .cvs.
-- img/ : Contiene las imagenes de los resultados generados en el programa prediction.py. 
-- methods/ : Contiene las implementaciones de los modelos, en este caso, solo el GTAN.
-- models/ : Contiene el modelo GTAN preentrenado. Su extensión es .pth.
-- new_model/ : Contiene el modelo GTAN entrenado y alamacenado tras ejecutar testing.py. Su extensión es .pth.
+- data/ : Tras ejecutar `preprocess_psimo.py` se generan JSON y almacenan en dicha carpeta.
+- model/ : Contiene los .pth.
+- psimo_reduced/ : Contiene los datos del dataset comprimidos en .zip.
+- ResGCNv1/ : Contiene el código de la arquitectura ResGCN.
+- st_gcn/ : Contiene el código de la arquitectura ST-GCN.
+- transforms/ : Transformaciones que se pueden aplicar al conjunto de datos.
 
 ## Referencias
 Gran parte del código presente esta extraido del repositorio [GaitGraph2](https://github.com/tteepe/GaitGraph2)
